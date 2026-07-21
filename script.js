@@ -293,7 +293,7 @@ pageTransitionLinks.forEach((link) => {
 
         window.setTimeout(() => {
             window.location.href = destination.href;
-        }, 210);
+        }, 50);
     });
 });
 
