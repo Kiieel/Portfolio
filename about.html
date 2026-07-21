@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Kiel Carlo Del Rosario.">
+    <title>About | Kiel Carlo Del Rosario</title>
+    <link rel="icon" type="image/png" href="images/icons/favicon.png">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" defer></script>
+    <script>
+        (function () {
+            var shouldSkipLoader = false;
+
+            try {
+                shouldSkipLoader = sessionStorage.getItem('portfolioSkipLoader') === '1';
+                sessionStorage.removeItem('portfolioSkipLoader');
+            } catch (error) {
+            }
+
+            try {
+                if (!shouldSkipLoader && document.referrer) {
+                    var previousPage = new URL(document.referrer);
+                    shouldSkipLoader = previousPage.origin === window.location.origin;
+                }
+            } catch (error) {
+            }
+
+            if (!shouldSkipLoader) {
+                document.documentElement.classList.add('show-loader');
+            }
+        }());
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav">
+           <a class="logo" href="index.html">Kiel</a>
+            <!-- <a class="logo" href="/">Kiel</a> -->
+
+            <input class="nav-toggle" type="checkbox" id="nav-toggle">
+            <label class="nav-button" for="nav-toggle" aria-label="Open navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <!-- <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about" aria-current="page">About</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/resume">Resume</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul> -->
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" aria-current="page">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="nav-socials" aria-label="Social links">
+                <a href="https://github.com/Kiieel" target="_blank" rel="noopener" aria-label="GitHub">
+                    <img src="images/icons/github-icon.png" alt="">
+                </a>
+                <a href="https://www.instagram.com/kiel_carlo/" target="_blank" rel="noopener" aria-label="Instagram">
+                    <img src="images/icons/ig-icon.png" alt="">
+                </a>
+                <a href="https://www.facebook.com/KielCarlo8" target="_blank" rel="noopener" aria-label="Facebook">
+                    <img src="images/icons/facebook-icon.png" alt="">
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page-main">
+        <section class="page-hero section">
+            <p class="eyebrow">About Me</p>
+            <h1>A student developer and creative operator learning through practical work.</h1>
+            <p>I work with FiveM systems, Discord communities, web concepts, photography, drone operation, and organized data tasks.</p>
+        </section>
+
+        <section class="section about">
+            <div class="about-layout">
+                <article class="about-card large-card">
+                    <h3>Background</h3>
+                    <p>
+                        I am Kiel Carlo Del Rosario, a 1st year Bachelor of Science in Information Technology student at FEU Tech. I graduated from the STEM strand and continue to build my skills through academic work, community projects, and hands-on digital systems.
+                    </p>
+                </article>
+                <article class="about-card">
+                    <h3>Experience</h3>
+                    <p>FiveM server administration, Discord moderation, data encoding, photography, drone operation, and practical web/mobile app concepts.</p>
+                </article>
+                <article class="about-card">
+                    <h3>Strengths</h3>
+                    <p>Responsible, easy-going, problem-solving focused, technically curious, and comfortable working with teams and communities.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="footer">
+        <p>© 2026 Kiel Carlo Del Rosario. All rights reserved.</p>
+    </footer>
+</body>
+</html>

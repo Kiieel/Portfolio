@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Kiel Carlo Del Rosario.">
+    <title> Home | Kiel Carlo Del Rosario</title>
+    <link rel="icon" type="image/png" href="images/icons/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        (function () {
+            var shouldSkipLoader = false;
+
+            try {
+                shouldSkipLoader = sessionStorage.getItem('portfolioSkipLoader') === '1';
+                sessionStorage.removeItem('portfolioSkipLoader');
+            } catch (error) {
+            }
+
+            try {
+                if (!shouldSkipLoader && document.referrer) {
+                    var previousPage = new URL(document.referrer);
+                    shouldSkipLoader = previousPage.origin === window.location.origin;
+                }
+            } catch (error) {
+            }
+
+            if (!shouldSkipLoader) {
+                document.documentElement.classList.add('show-loader');
+            }
+        }());
+    </script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav">
+           <a class="logo" href="index.html">Kiel</a>
+            <!-- <a class="logo" href="/">Kiel</a> -->
+
+
+            <input class="nav-toggle" type="checkbox" id="nav-toggle">
+            <label class="nav-button" for="nav-toggle" aria-label="Open navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <!-- <ul class="nav-links">
+                <li><a href="/" aria-current="page">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/resume">Resume</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul> -->
+
+            <ul class="nav-links">
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="nav-socials" aria-label="Social links">
+                <a href="https://github.com/Kiieel" target="_blank" rel="noopener" aria-label="GitHub">
+                    <img src="images/icons/github-icon.png" alt="">
+                </a>
+                <a href="https://www.instagram.com/kiel_carlo/" target="_blank" rel="noopener" aria-label="Instagram">
+                    <img src="images/icons/ig-icon.png" alt="">
+                </a>
+                <a href="https://www.facebook.com/KielCarlo8" target="_blank" rel="noopener" aria-label="Facebook">
+                    <img src="images/icons/facebook-icon.png" alt="">
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-copy">
+                <h1>Kiel Carlo <span>Del Rosario</span></h1>
+                <p class="hero-text">
+                    I am a 1st year BSIT student specializing in Web and Mobile Applications,
+                    building FiveM systems, Discord tools, creative media work, and organized data workflows.
+                </p>
+
+                <div class="hero-actions">
+                    <a class="primary-button" href="projects.html">View Projects</a>
+                    <a class="secondary-button" href="contact.html">Contact Me</a>
+                    <!-- <a class="primary-button" href="/projects">View Projects</a>
+                    <a class="secondary-button" href="/contact">Contact Me</a> -->
+                </div>
+
+                <div class="social-row" aria-label="Social media profiles">
+                    <a href="https://github.com/Kiieel" target="_blank" rel="noopener" aria-label="GitHub"><img src="images/icons/github-icon.png" alt=""></a>
+                    <a href="https://www.instagram.com/kiel_carlo/" target="_blank" rel="noopener" aria-label="Instagram"><img src="images/icons/ig-icon.png" alt=""></a>
+                    <a href="https://www.facebook.com/KielCarlo8" target="_blank" rel="noopener" aria-label="Facebook"><img src="images/icons/facebook-icon.png" alt=""></a>
+                </div>
+</div>
+
+            <aside class="photo-panel" aria-label="Profile photo">
+                <div class="photo-frame">
+                    <img src="images/formal-photo.png">
+                </div>
+            </aside>
+        </section>
+
+        <section class="section toolkit-section" id="skills">
+            <div class="section-heading centered">
+                <p class="eyebrow">Toolkit</p>
+                <h2>Tools I Used</h2>
+                <p>These are the tools and languages I used for my projects.</p>
+            </div>
+
+            <div class="stack-grid">
+                <span><img src="images/icons/lua-icon.png" alt="Lua logo">Lua</span>
+                <span><img src="images/icons/html-icon.png" alt="HTML logo">HTML</span>
+                <span><img src="images/icons/css-icon.png" alt="CSS logo">CSS</span>
+                <span><img src="images/icons/node-icon.png" alt="Node.js logo">Node.js</span>
+                <span><img src="images/icons/java-icon.png" alt="JavaScript logo">JavaScript</span>
+                <span><img src="images/icons/php-icon.png" alt="PHP logo">PHP</span>
+                <span><img src="images/icons/mysql-icon.png" alt="MySQL logo">MySQL</span>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="footer">
+        <p>© 2026 Kiel Carlo Del Rosario. All rights reserved.</p>
+    </footer>
+</body>
+</html>

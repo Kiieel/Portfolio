@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Project showcase for Kiel Carlo Del Rosario.">
+    <title>Projects | Kiel Carlo Del Rosario</title>
+    <link rel="icon" type="image/png" href="images/icons/favicon.png">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" defer></script>
+    <script>
+        (function () {
+            var shouldSkipLoader = false;
+
+            try {
+                shouldSkipLoader = sessionStorage.getItem('portfolioSkipLoader') === '1';
+                sessionStorage.removeItem('portfolioSkipLoader');
+            } catch (error) {
+            }
+
+            try {
+                if (!shouldSkipLoader && document.referrer) {
+                    var previousPage = new URL(document.referrer);
+                    shouldSkipLoader = previousPage.origin === window.location.origin;
+                }
+            } catch (error) {
+            }
+
+            if (!shouldSkipLoader) {
+                document.documentElement.classList.add('show-loader');
+            }
+        }());
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav">
+           <a class="logo" href="index.html">Kiel</a>
+            <!-- <a class="logo" href="/">Kiel</a> -->
+
+
+            <input class="nav-toggle" type="checkbox" id="nav-toggle">
+            <label class="nav-button" for="nav-toggle" aria-label="Open navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <!-- <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/projects" aria-current="page">Projects</a></li>
+                <li><a href="/resume">Resume</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul> -->
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html" aria-current="page">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="nav-socials" aria-label="Social links">
+                <a href="https://github.com/Kiieel" target="_blank" rel="noopener" aria-label="GitHub">
+                    <img src="images/icons/github-icon.png" alt="">
+                </a>
+                <a href="https://www.instagram.com/kiel_carlo/" target="_blank" rel="noopener" aria-label="Instagram">
+                    <img src="images/icons/ig-icon.png" alt="">
+                </a>
+                <a href="https://www.facebook.com/KielCarlo8" target="_blank" rel="noopener" aria-label="Facebook">
+                    <img src="images/icons/facebook-icon.png" alt="">
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page-main">
+        <section class="page-hero section centered">
+            <p class="eyebrow">Projects</p>
+            <h1>Project Showcase</h1>
+            <p>Click a card to open and play the project video. Hovering still previews the clip quietly.</p>
+        </section>
+
+        <section class="section projects projects-page">
+            <div class="project-topline compact-project-topline">
+                <div class="project-tabs" aria-label="Project categories">
+                    <button class="category-tab is-active" type="button" data-category-filter="fivem-server" aria-pressed="true">FiveM Server</button>
+                    <button class="category-tab" type="button" data-category-filter="fivem" aria-pressed="false">FiveM Scripts</button>
+                    <button class="category-tab" type="button" data-category-filter="web" aria-pressed="false">Web</button>
+                    <button class="category-tab" type="button" data-category-filter="software" aria-pressed="false">Software</button>
+                </div>
+            </div>
+
+            <div class="project-showcase project-gallery" id="project-showcase" tabindex="0" aria-label="Project showcase gallery">
+                <article class="project-card gallery-card video-card playable-card" role="button" tabindex="0" data-project-category="fivem" hidden data-video-src="videos/Projectcars.mp4" data-video-title="Project Cars">
+                    <div class="project-media">
+                        <span class="category-label">FiveM Script</span>
+                        <video class="project-video" muted loop playsinline preload="metadata" poster="images/thumbnail/projectcar_thumb.png" src="videos/Projectcars.mp4"></video>
+                        <span class="play-icon" aria-hidden="true"><span></span></span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Project Cars</h3>
+                        <p>A vehicle-building system where players scavenge parts from scrap vehicles, trash bins, abandoned wheels, and map locations to assemble a functional car.</p>
+                        <div class="project-tags"><span>Vehicle Building</span><span>Roleplay System</span><span>Easy to Configure</span><span>Optimized</span><span>Highly Configurable</span></div>
+                    </div>
+                </article>
+
+                <article class="project-card gallery-card video-card playable-card" role="button" tabindex="0" data-project-category="fivem" hidden data-video-src="videos/Pvp.mp4" data-video-title="PvP Script">
+                    <div class="project-media">
+                        <span class="category-label">FiveM Script</span>
+                        <video class="project-video" muted loop playsinline preload="metadata" poster="images/thumbnail/pvp_thumb.png" src="videos/Pvp.mp4"></video>
+                        <span class="play-icon" aria-hidden="true"><span></span></span>
+                    </div>
+                    <div class="project-content">
+                        <h3>PvP Script</h3>
+                        <p>A competitive PvP system inspired by Valorant, featuring multiple game modes including Deathmatch, Team Deathmatch, and Duel Match.</p>
+                        <div class="project-tags"><span>Deathmatch</span><span>Team Deathmatch</span><span>Duel Mode</span><span>Easy to Configure</span><span>Optimized</span><span>Highly Configurable</span></div>
+                    </div>
+                </article>
+
+                <article class="project-card gallery-card video-card playable-card" role="button" tabindex="0" data-project-category="fivem" hidden data-video-src="videos/Clothingpermission.mp4" data-video-title="Clothing Permission Script">
+                    <div class="project-media">
+                        <span class="category-label">FiveM Script</span>
+                        <video class="project-video" muted loop playsinline preload="metadata" poster="images/thumbnail/clothingperms_thumb.png" src="videos/Clothingpermission.mp4"></video>
+                        <span class="play-icon" aria-hidden="true"><span></span></span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Clothing Permission Script</h3>
+                        <p>A clothing permission system that lets server owners assign exclusive clothing, props, and accessories to specific players, with temporary access support for shared outfits.</p>
+                        <div class="project-tags"><span>Permission System</span><span>Exclusive Clothing Access</span><span>Optimized</span><span>Highly Configurable</span></div>
+                    </div>
+                </article>
+
+                <article class="project-card gallery-card video-card playable-card" role="button" tabindex="0" data-project-category="fivem" hidden data-video-src="videos/Salonjob.mp4" data-video-title="Salon Job">
+                    <div class="project-media">
+                        <span class="category-label">FiveM Script</span>
+                        <video class="project-video" muted loop playsinline preload="metadata" poster="images/thumbnail/salon_thumb.png" src="videos/Salonjob.mp4"></video>
+                        <span class="play-icon" aria-hidden="true"><span></span></span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Salon Job</h3>
+                        <p>A complete salon job system that lets players own and operate a hair salon, hire employees, manage daily operations, and provide haircut and styling services within the city.</p>
+                        <div class="project-tags"><span>Player-Owned Business</span><span>Employee Management</span><span>Optimized</span><span>Highly Configurable</span><span>QBCore / ESX</span></div>
+                    </div>
+                </article>
+
+                <article class="project-card gallery-card video-card playable-card" role="button" tabindex="0" data-project-category="fivem" hidden data-video-src="videos/Deathcam.mp4" data-video-title="Deathcam">
+                    <div class="project-media">
+                        <span class="category-label">FiveM Script</span>
+                        <video class="project-video" muted loop playsinline preload="metadata" poster="images/thumbnail/deathcam_thumb.png" src="videos/Deathcam.mp4"></video>
+                        <span class="play-icon" aria-hidden="true"><span></span></span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Deathcam</h3>
+                        <p>A combat report system that displays detailed information about the player who eliminated you, including hit location and damage received.</p>
+                        <div class="project-tags"><span>Combat System</span><span>Optimized</span><span>Highly Configurable</span></div>
+                    </div>
+                </article>
+
+                <article class="project-card gallery-card video-card playable-card" role="button" tabindex="0" data-project-category="fivem" hidden data-video-src="videos/Freecam.mp4" data-video-title="Freecam">
+                    <div class="project-media">
+                        <span class="category-label">FiveM Script</span>
+                        <video class="project-video" muted loop playsinline preload="metadata" poster="images/thumbnail/freecam_thumb.png" src="videos/Freecam.mp4"></video>
+                        <span class="play-icon" aria-hidden="true"><span></span></span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Freecam</h3>
+                        <p>A free camera system that allows players to spectate the game world after death, with access controlled through the /freecamenu command.</p>
+                        <div class="project-tags"><span>Spectator Mode</span><span>Admin Controls</span><span>Optimized</span><span>Highly Configurable</span></div>
+                    </div>
+                </article>
+
+                <article class="project-card gallery-card video-card playable-card" role="button" tabindex="0" data-project-category="fivem" hidden data-video-src="videos/Hitmarker.mp4" data-video-title="Hitmarker">
+                    <div class="project-media">
+                        <span class="category-label">FiveM Script</span>
+                        <video class="project-video" muted loop playsinline preload="metadata" poster="images/thumbnail/hitmarker_thumb.png" src="videos/Hitmarker.mp4"></video>
+                        <span class="play-icon" aria-hidden="true"><span></span></span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Hitmarker</h3>
+                        <p>A hitmarker system that displays real-time damage dealt to your target. Players can enable or disable it using the /hitmarker command.</p>
+                        <div class="project-tags"><span>Real-Time Damage Indicator</span><span>PvP Support</span><span>Optimized</span><span>Highly Configurable</span></div>
+                    </div>
+                </article>
+
+                <article class="project-card gallery-card video-card playable-card" role="button" tabindex="0" data-project-category="fivem" hidden data-video-src="videos/Invlogs.mp4" data-video-title="Inventory Logs">
+                    <div class="project-media">
+                        <span class="category-label">FiveM Script</span>
+                        <video class="project-video" muted loop playsinline preload="metadata" poster="images/thumbnail/invlogs_thumb.png" src="videos/Invlogs.mp4"></video>
+                        <span class="play-icon" aria-hidden="true"><span></span></span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Inventory Logs</h3>
+                        <p>An advanced inventory logging system that helps administrators monitor inventory activity directly in-game for easier and more efficient moderation.</p>
+                        <div class="project-tags"><span>Inventory Logging</span><span>In-Game Monitoring</span><span>Optimized</span><span>Highly Configurable</span></div>
+                    </div>
+                </article>
+
+                <article class="project-card gallery-card video-card playable-card" role="button" tabindex="0" data-project-category="fivem" hidden data-video-src="videos/Scoreboard.mp4" data-video-title="Scoreboard">
+                    <div class="project-media">
+                        <span class="category-label">FiveM Script</span>
+                        <video class="project-video" muted loop playsinline preload="metadata" poster="images/thumbnail/scoreboard_thumb.png" src="videos/Scoreboard.mp4"></video>
+                        <span class="play-icon" aria-hidden="true"><span></span></span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Scoreboard</h3>
+                        <p>A modern scoreboard that displays online players and on-duty department members in real time through a clean, organized interface.</p>
+                        <div class="project-tags"><span>Real-Time Statistics</span><span>Department Tracking</span><span>Optimized</span><span>Highly Configurable</span></div>
+                    </div>
+                </article>
+
+                <article class="project-card gallery-card video-card playable-card" role="button" tabindex="0" data-project-category="fivem" hidden data-video-src="videos/Traphouse.mp4" data-video-title="Traphouse System">
+                    <div class="project-media">
+                        <span class="category-label">FiveM Script</span>
+                        <video class="project-video" muted loop playsinline preload="metadata" poster="images/thumbnail/traphouse_thumb.png" src="videos/Traphouse.mp4"></video>
+                        <span class="play-icon" aria-hidden="true"><span></span></span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Traphouse System</h3>
+                        <p>A trap house system where players raid designated houses for valuable loot, with dirty money rewards for eliminating enemies.</p>
+                        <div class="project-tags"><span>Loot System</span><span>Easy to Configure</span><span>Optimized</span><span>Highly Configurable</span></div>
+                    </div>
+                </article>                <article class="project-card gallery-card server-card" data-project-category="fivem-server">
+                    <div class="project-media logo-media">
+                        <span class="category-label">FiveM Server</span>
+                        <img src="images/icons/continental_logo.png" alt="Continental City logo">
+                    </div>
+                    <div class="project-content">
+                        <h3>Continental City</h3>
+                        <p>A semi-serious FiveM roleplay server with optimized quality-of-life scripts and a dedicated car community system.</p>
+                        <div class="project-tags"><span>QBCore</span><span>Optimized</span><span>SSRP</span></div>
+                    </div>
+                </article>
+
+                <div class="soon-panel" data-project-category="web" hidden>
+                    <span class="category-label">Web</span>
+                    <p class="eyebrow">Web</p>
+                    <h2>Soon</h2>
+                    <p>I have not added a finished web project yet. This section is ready for future website work.</p>
+                </div>
+
+                <article class="project-card gallery-card video-card playable-card" role="button" tabindex="0" data-project-category="software" data-video-src="videos/Discordbot.mp4" data-video-title="Discord Bot" hidden>
+                    <div class="project-media">
+                        <span class="category-label">Software</span>
+                        <video class="project-video" muted loop playsinline preload="metadata" poster="images/thumbnail/discord_thumb.png" src="videos/Discordbot.mp4"></video>
+                        <span class="play-icon" aria-hidden="true"><span></span></span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Discord Bot</h3>
+                        <p>An all-in-one Discord bot for FiveM servers with automated tools for whitelist processing, nickname changes, role requests, role removal, time tracking, sticky messages, and more.</p>
+                        <div class="project-tags"><span>Server Automation</span></div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <div class="video-modal" id="video-modal" hidden>
+        <div class="video-modal-backdrop" data-close-video></div>
+        <section class="video-dialog" role="dialog" aria-modal="true" aria-labelledby="video-modal-title">
+            <div class="video-dialog-header">
+                <h2 id="video-modal-title">Project Video</h2>
+                <button class="modal-close" type="button" data-close-video aria-label="Close video">X</button>
+            </div>
+            <video class="modal-video" id="modal-video" controls playsinline></video>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>© 2026 Kiel Carlo Del Rosario. All rights reserved.</p>
+    </footer>
+</body>
+</html>

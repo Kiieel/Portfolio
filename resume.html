@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kiel Carlo Del Rosario Resume.">
+    <title>Resume | Kiel Carlo Del Rosario</title>
+    <link rel="icon" type="image/png" href="images/icons/favicon.png">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" defer></script>
+    <script>
+        (function () {
+            var shouldSkipLoader = false;
+
+            try {
+                shouldSkipLoader = sessionStorage.getItem('portfolioSkipLoader') === '1';
+                sessionStorage.removeItem('portfolioSkipLoader');
+            } catch (error) {
+            }
+
+            try {
+                if (!shouldSkipLoader && document.referrer) {
+                    var previousPage = new URL(document.referrer);
+                    shouldSkipLoader = previousPage.origin === window.location.origin;
+                }
+            } catch (error) {
+            }
+
+            if (!shouldSkipLoader) {
+                document.documentElement.classList.add('show-loader');
+            }
+        }());
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav">
+           <a class="logo" href="index.html">Kiel</a>
+            <!-- <a class="logo" href="/">Kiel</a> -->
+
+            <input class="nav-toggle" type="checkbox" id="nav-toggle">
+            <label class="nav-button" for="nav-toggle" aria-label="Open navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <!-- <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/resume" aria-current="page">Resume</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul> -->
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html" aria-current="page">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            
+            <div class="nav-socials" aria-label="Social links">
+                <a href="https://github.com/Kiieel" target="_blank" rel="noopener" aria-label="GitHub">
+                    <img src="images/icons/github-icon.png" alt="">
+                </a>
+                <a href="https://www.instagram.com/kiel_carlo/" target="_blank" rel="noopener" aria-label="Instagram">
+                    <img src="images/icons/ig-icon.png" alt="">
+                </a>
+                <a href="https://www.facebook.com/KielCarlo8" target="_blank" rel="noopener" aria-label="Facebook">
+                    <img src="images/icons/facebook-icon.png" alt="">
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page-main">
+        <section class="page-hero section centered">
+            <p class="eyebrow">Resume / Experience</p>
+            <h1>Education and Experience</h1>
+            <p>A quick view of my current studies, digital systems experience, creative media work, and school background.</p>
+        </section>
+
+        <section class="section resume">
+            <div class="timeline expanded-timeline">
+                <article>
+                    <span>Present</span>
+                    <h3>BSIT Student - FEU Tech</h3>
+                    <p>1st year BSIT student specializing in Web and Mobile Application.</p>
+                </article>
+                <article>
+                    <span>School</span>
+                    <h3>STEM Graduate</h3>
+                    <p>Senior high school STEM graduate with consistent honors during multiple quarters.</p>
+                </article>
+                <article>
+                    <span>Experience</span>
+                    <h3>FiveM, Discord, and Web</h3>
+                    <p>Experience with FiveM server administration, Discord moderation, FiveM scripts, and web concepts.</p>
+                </article>
+                <article>
+                    <span>Creative</span>
+                    <h3>Photography and Drone Operation</h3>
+                    <p>Hands-on experience capturing photos and operating drones for visual content work.</p>
+                </article>
+                <article>
+                    <span>Data</span>
+                    <h3>Data Encoding</h3>
+                    <p>Experienced in organizing, entering, and checking data with accuracy.</p>
+                </article>
+                <article>
+                    <span>Activities</span>
+                    <h3>Computer Club and Boy Scouts</h3>
+                    <p>Built teamwork, discipline, leadership, computer literacy, problem-solving, and collaboration skills.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="footer">
+        <p>© 2026 Kiel Carlo Del Rosario. All rights reserved.</p>
+    </footer>
+</body>
+</html>

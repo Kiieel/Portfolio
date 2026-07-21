@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Kiel Carlo Del Rosario by email, Facebook, Instagram, or GitHub.">
+    <title>Contact | Kiel Carlo Del Rosario</title>
+    <link rel="icon" type="image/png" href="images/icons/favicon.png">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" defer></script>
+    <script>
+        (function () {
+            var shouldSkipLoader = false;
+
+            try {
+                shouldSkipLoader = sessionStorage.getItem('portfolioSkipLoader') === '1';
+                sessionStorage.removeItem('portfolioSkipLoader');
+            } catch (error) {
+            }
+
+            try {
+                if (!shouldSkipLoader && document.referrer) {
+                    var previousPage = new URL(document.referrer);
+                    shouldSkipLoader = previousPage.origin === window.location.origin;
+                }
+            } catch (error) {
+            }
+
+            if (!shouldSkipLoader) {
+                document.documentElement.classList.add('show-loader');
+            }
+        }());
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav">
+            <a class="logo" href="index.html">Kiel</a>
+            <!-- <a class="logo" href="/">Kiel</a> -->
+
+            <input class="nav-toggle" type="checkbox" id="nav-toggle">
+            <label class="nav-button" for="nav-toggle" aria-label="Open navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <!-- <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/resume">Resume</a></li>
+                <li><a href="/contact" aria-current="page">Contact</a></li>
+            </ul> -->
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
+            </ul>
+
+            <div class="nav-socials" aria-label="Social links">
+                <a href="https://github.com/Kiieel" target="_blank" rel="noopener" aria-label="GitHub">
+                    <img src="images/icons/github-icon.png" alt="">
+                </a>
+                <a href="https://www.instagram.com/kiel_carlo/" target="_blank" rel="noopener" aria-label="Instagram">
+                    <img src="images/icons/ig-icon.png" alt="">
+                </a>
+                <a href="https://www.facebook.com/KielCarlo8" target="_blank" rel="noopener" aria-label="Facebook">
+                    <img src="images/icons/facebook-icon.png" alt="">
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page-main">
+        <section class="section contact contact-page">
+            <div class="contact-card">
+                <div>
+                    <p class="eyebrow">Contact</p>
+                    <h1>Let us connect.</h1>
+                    <p>You can reach me by email or through my social media accounts.</p>
+                    <div class="contact-links">
+                        <a href="mailto:delrosariokielcarlo@gmail.com">
+                            <img src="images/icons/gmail-icon.png" alt="Gmail icon">
+                            delrosariokielcarlo@gmail.com
+                        </a>
+                        <a href="https://www.facebook.com/KielCarlo8" target="_blank" rel="noopener">
+                            <img src="images/icons/facebook-icon.png" alt="">
+                            Facebook
+                        </a>
+                        <a href="https://www.instagram.com/kiel_carlo/" target="_blank" rel="noopener">
+                            <img src="images/icons/ig-icon.png" alt="">
+                            Instagram
+                        </a>
+                        <a href="https://github.com/Kiieel" target="_blank" rel="noopener">
+                            <img src="images/icons/github-icon.png" alt="">
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <form id="contact-form" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="34cc6edd-2e76-444b-b0a5-cb0fca90d91c">
+                    <input type="hidden" name="subject" value="New portfolio message from Kiel Portfolio">
+                    <input type="checkbox" name="botcheck" class="hidden-field" tabindex="-1" autocomplete="off">
+
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" placeholder="Your name" required>
+
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="your@email.com" required>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Write your message" required></textarea>
+
+                    <button type="submit">Send Message</button>
+                    <p class="form-status" id="form-status" role="status"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="footer">
+        <p>© 2026 Kiel Carlo Del Rosario. All rights reserved.</p>
+    </footer>
+</body>
+</html>
